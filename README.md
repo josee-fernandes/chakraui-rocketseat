@@ -4,4 +4,4 @@
 
 ## Demo
 
-[Check live app](https://rocketset-chakraui.netlify.app/ "Demo Link")
+[Check live app](https://rocketseat-chakraui.netlify.app/ "Demo Link")
