@@ -2,8 +2,17 @@ import React from 'react'
 
 import { ChakraProvider, ColorModeProvider, theme, Theme } from "@chakra-ui/react"
 import { ThemeProvider } from '@emotion/react'
+import { createBreakpoints } from '@chakra-ui/theme-tools'
 
 import '@fontsource/roboto'
+
+const breakpoints = createBreakpoints({
+   sm: "320px",
+   md: "768px",
+   lg: "960px",
+   xl: "1200px",
+   "2xl": "1440px"
+ })
 
 const customTheme: Theme = {
    ...theme,
@@ -36,7 +45,8 @@ const customTheme: Theme = {
          700: '#202024',
          800: '#121214'
       }
-   }
+   },
+   breakpoints
 }
 
 const ThemeContainer: React.FC = ({ children }) => (

@@ -10,26 +10,53 @@ import Separator from '../components/Separator'
 const Home: React.FC = () => (
    <Grid
       as="main"
-      height="100vh"
-      templateColumns="1fr 480px 480px 1fr"
-      templateRows="1fr 480px 1fr"
-      templateAreas="
-         '. . . .'
-         '. LG FM .'
-         '. . . .'
-      "
+      minHeight="100vh"
+      padding={{
+         base: '5',
+         sm: '10',
+         md: '16',
+         lg: '0'
+      }}
+      templateColumns={{
+         base: '1fr',
+         lg: '1fr 480px 480px 1fr'
+      }}
+      templateRows={{
+         base: '300px 480px',
+         lg: '1fr 480px 1fr'
+      }}
+      templateAreas={{
+         base: `
+            'LG'
+            'FM'
+         `,
+
+         lg: `
+            '. . . .'
+            '. LG FM .'
+            '. . . .'
+         `
+      }}
       placeItems="center"
+      
    >
       <Flex
          gridArea="LG"
          flexDir="column"
-         alignItems="flex-start"
+         alignItems={{
+            base: 'center',
+            lg: 'flex-start'
+         }}
       >
          <img src="/rocketseat.svg" alt="Rocketseat" />
          <Heading
             size="2xl"
             lineHeight="shorter"
             marginTop="16"
+            textAlign={{
+               base: 'center',
+               lg: 'left'
+            }}
          >
             Faça seu login na plataforma
          </Heading>
